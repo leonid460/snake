@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#canvas {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border: 3px solid black;
+    box-sizing: content-box;
+}
+
+#score {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+#header {
+    margin-bottom: 6px;
+    border-bottom: 3px solid black;
+}
+
+.blinking > * {
+    animation: blink 1s infinite;
+}
+
+#result-msg {
+    display: none;
+    width: 506px;
+    height: 345px;
+    border: 3px solid black;
+    font-size: 85px;
+    padding: 20px 10px;
+    white-space: pre-wrap;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    0% {
+        opacity: 1;
+    }
+}
